@@ -1,0 +1,260 @@
+Microsoft Windows [Version 10.0.19044.1586]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+C:\Users\vlvor>python
+Python 3.10.3 (tags/v3.10.3:a342a49, Mar 16 2022, 13:07:40) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a= 'Hellow world'
+>>> print ("Hellow world-> " + a)
+Hellow world-> Hellow world
+>>> res_a = a[:4] + a[7:]
+>>> print (res_a)
+Hellworld
+>>> res_a = a[:1] + a[2:] + a[:3] + a[:9] + a[:10] + a[:11]
+>>> print (res_a)
+Hllow worldHelHellow woHellow worHellow worl
+>>> a= 'Hellow world'
+>>> res_a = str.replace('H',l, e, d '')
+  File "<stdin>", line 1
+    res_a = str.replace('H',l, e, d '')
+                                    ^^
+SyntaxError: invalid syntax
+>>> res_a = str.replace('H',l, e, d '')
+  File "<stdin>", line 1
+    res_a = str.replace('H',l, e, d '')
+                                    ^^
+SyntaxError: invalid syntax
+>>> a= 'Hellow world'
+>>> print(a.translate({ord(i): None for i in '123691011'}))
+Hellow world
+>>> print(a.translate({ord(i): None for i in '123'}))
+Hellow world
+>>> print(a.translate({ord(i): None for i in '123'}))
+Hellow world
+>>> s= 'Hellow world'
+>>> print(a.translate({ord(i): None }))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'i' is not defined. Did you mean: 'id'?
+>>> print(s.translate({ord(i): None }))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'i' is not defined. Did you mean: 'id'?
+>>> print(s.translate({ord(H): None }))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'H' is not defined
+>>> print(s.translate({ord(h): None }))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'h' is not defined
+>>> print(s.translate({ord(e): None }))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'e' is not defined
+>>> s= 'Hellow world'
+>>> print(s.replace('Hel', ''))
+low world
+>>> print(s.replace('Hel','rld ''))
+  File "<stdin>", line 1
+    print(s.replace('Hel','rld ''))
+                                ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> print(s.replace('Hel','rld' ''))
+rldlow world
+>>> print(s.replace('Hel' ''))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: replace expected at least 2 arguments, got 1
+>>> print(s.replace('Hel', 'orld', ''))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object cannot be interpreted as an integer
+>>> print(s.replace('Hel', ''))
+low world
+>>> c = '7'
+>>> c = input()
+7
+>>> c = input()
+'7'
+>>> c1 = ''
+>>> for i in c
+  File "<stdin>", line 1
+    for i in c
+              ^
+SyntaxError: expected ':'
+>>> for i in c:
+...    2
+...
+2
+2
+2
+>>> c = 7;
+>>> c = '7'
+>>> print(c *2 )
+77
+>>> print(c+c )
+77
+>>> print(c*c )
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can't multiply sequence by non-int of type 'str'
+>>> print(c*2 )
+77
+>>> int(c)
+7
+>>> print(c*2 )
+77
+>>> print(int(c)*2 )
+14
+>>> d = '325','793'
+>>> print(d)
+('325', '793')
+>>> d = ['325', '793']
+>>> print(d)
+['325', '793']
+>>> print(d[1], d[0])
+793 325
+>>> tel = '+7(812)134-12-324'
+>>> res_tel = tel.replace(" ", "(", ")", "-")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: replace expected at most 3 arguments, got 4
+>>> res_tel = tel.replace(" ")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: replace expected at least 2 arguments, got 1
+>>> res_tel = tel.replace("( ", " ")
+>>> print(res_tel)
++7(812)134-12-324
+>>> import re
+>>> res_tel=re.sub("(|)|-|", "",tel)
+>>> print(res_tel)
++7(812)13412324
+>>> res_tel=re.sub("[(|)|-]", "",tel)
+>>> res_tel
+'+781213412324'
+>>> n=input('Введите число: ')
+Введите число: 123
+>>> nums = list(range(1, int(n) +1))
+>>> print nums
+  File "<stdin>", line 1
+    print nums
+    ^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+>>> print(nums)
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123]
+>>> print(-*nums)
+  File "<stdin>", line 1
+    print(-*nums)
+           ^
+SyntaxError: invalid syntax
+>>> print(*nums)
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123
+>>> k = range(1, int(n) +1))
+  File "<stdin>", line 1
+    k = range(1, int(n) +1))
+                           ^
+SyntaxError: unmatched ')'
+>>> res_num = re.sub("[9|  ]", nums)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: sub() missing 1 required positional argument: 'string'
+>>> str_num = ''.join(num)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'num' is not defined. Did you mean: 'nums'?
+>>> res_num=num.remove(9)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'num' is not defined. Did you mean: 'nums'?
+>>> num.remove(9)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'num' is not defined. Did you mean: 'nums'?
+>>> print num
+  File "<stdin>", line 1
+    print num
+    ^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+>>> print nums
+  File "<stdin>", line 1
+    print nums
+    ^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+>>> print (nums)
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123]
+>>> nums.remve(9)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'remve'. Did you mean: 'remove'?
+>>> nums.remove(9)
+>>> print(nums)
+[1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123]
+>>> nums.remove( )
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list.remove() takes exactly one argument (0 given)
+>>> nums.remove(' ')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+>>> nums.remove(" ")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+>>> nums.remove(", ")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+>>> print(' '.join(map(str, nums)))
+1 2 3 4 5 6 7 8 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123
+>>> print(str)
+<class 'str'>
+>>> print(nums)
+[1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123]
+>>> print(' '.join(map(str, nums)))
+1 2 3 4 5 6 7 8 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123
+>>> print(' '.join(map(str, nums)))
+1 2 3 4 5 6 7 8 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123
+>>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*//*/*/*///////////////////////////////////////////////////////////////////**********************
+/**************************************************************************************////////////////////////
+from matplotlib import projections
+from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
+import numpy as np
+from mpl_toolkits.mplot3d import axes3d
+import seaborn as sns
+import pandas as pd
+
+pd.read_csv('titanic.csv', delimiter =',')
+#article_read= pd.read_csv('titanic.csv', delimiter=';', names = ['Name','Sex', 'Age', 'SibSp', 'Parch', 'Ticket','Fare', 'Cabin', 'Embarked'  ] )
+col_names = ['Name','Sex', 'Age', 'SibSp', 'Parch', 'Ticket','Fare', 'Cabin', 'Embarked'  ]
+article_read = pd.read_csv(r'/content/titanic.csv', names=col_names) 
+#article_read.head()
+#article_read.tail()
+
+#article_read.head([['Age', 'Sex']])
+print(article_read)
+article_read[['Age', 'Sex']].head()
+#article_read['Parch']
+#dropna(self, axis=0, how="any", thresh=None, subset=None, inplace=False)
+df.info()
+
+
+
